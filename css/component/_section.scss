@@ -1,0 +1,23 @@
+@use "../setting/setting";
+.c-section {
+  padding: 40px 0;
+}
+
+.c-section + .c-section {
+  padding-top: 0;
+}
+
+.c-section__heading {
+  position: relative;
+  text-align: center;
+  @include setting.heading-2;
+}
+
+@media (min-width: 1024px) {
+  .c-section {
+    padding: 64px 0 120px;
+  }
+  .c-section + .c-section {
+    margin-top: -64px;
+  }
+}

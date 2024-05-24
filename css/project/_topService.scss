@@ -1,0 +1,83 @@
+@use "../setting/setting";
+
+.p-topService {
+  padding: 40px 0 88px;
+}
+
+.p-topService__contents {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+
+.p-topService__heading {
+  @include setting.heading-2;
+  text-align: center;
+}
+
+.p-topService__text {
+  margin-top: clamp(0.75rem, 0.295rem + 2.27vw, 2rem);
+  font-size: setting.$fz-text;
+  line-height: 2;
+}
+
+.p-topService__img {
+  img {
+    aspect-ratio: 3 / 2;
+  }
+}
+
+@media (min-width: 768px) {
+  .p-topService__contents {
+    flex-direction: row;
+    justify-content: space-between;
+
+    position: relative;
+  }
+
+  .p-topService__texts {
+    width: 44%;
+    position: relative;
+    margin-top: 40px;
+    margin-bottom: 60px; /* 追加 */
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: calc(100% + 48px);
+      height: 300px;
+      background: #f1f1f1;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 20%;
+      z-index: -1;
+    }
+  }
+
+  .p-topService__img {
+    width: 480px;
+    height: 480px;
+
+    img {
+      aspect-ratio: 5 / 4;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .p-topService {
+    padding: 64px 0 108px;
+  }
+
+  .p-topService__texts {
+    margin-top: 96px;
+
+    &::before {
+      height: 300px;
+    }
+  }
+
+  .p-topService__text {
+    padding: 0 24px;
+  }
+}

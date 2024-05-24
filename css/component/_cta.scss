@@ -1,0 +1,25 @@
+@use "../setting/setting";
+
+.c-cta {
+  color: #fff;
+  border-bottom: 1px solid #999;
+  padding-bottom: 88px;
+}
+
+.c-cta__heading {
+  @include setting.heading-2;
+}
+
+.c-cta__text {
+  margin-top: clamp(0.75rem, 0.25rem + 1.25vw, 1.25rem);
+  font-size: setting.$fz-text;
+}
+
+@media (min-width: 1024px) {
+  .c-cta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 64px;
+  }
+}

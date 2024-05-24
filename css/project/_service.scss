@@ -1,0 +1,44 @@
+@use "../setting/setting";
+.p-service {
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+.p-service__item {
+  margin: 24px 0 40px;
+
+  h3 {
+    @include setting.heading-2;
+    margin-bottom: 16px;
+  }
+
+  img {
+    aspect-ratio: 3 / 2;
+    margin-bottom: 40px;
+  }
+
+  p {
+    line-height: 2;
+    font-size: setting.$fz-text;
+    margin-bottom: 40px;
+  }
+}
+
+.p-service__gallery {
+  display: flex;
+  gap: 16px;
+
+  img {
+    width: calc(50% - 8px);
+  }
+}
+
+@media (min-width: 1024px) {
+  .p-service__item {
+    margin: 40px 0 64px;
+
+    h3 {
+      margin-bottom: 24px;
+    }
+  }
+}

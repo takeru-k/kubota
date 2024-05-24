@@ -1,0 +1,58 @@
+@use "../setting/setting";
+
+.p-recruit {
+  max-width: 620px;
+  margin: 0 auto;
+
+  h3 {
+    margin-top: 24px;
+    @include setting.heading-2;
+  }
+}
+
+.p-recruit__item {
+  background: setting.$color-sub;
+  padding: 8px 16px;
+  margin-top: 16px;
+  margin-bottom: 40px;
+
+  h3 {
+    color: setting.$color-main;
+    margin-bottom: 12px;
+  }
+}
+
+.p-recruit__desc {
+  padding-bottom: 16px;
+  margin-top: 16px;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid #dadada;
+  }
+
+  h4 {
+    font-size: setting.$fz-text;
+  }
+
+  p {
+    margin-top: 8px;
+    font-size: setting.$fz-text;
+  }
+}
+
+@media (min-width: 1024px) {
+  .p-recruit {
+    h3 {
+      margin-top: 64px;
+    }
+  }
+  .p-recruit__item {
+    padding: 20px 40px 4px;
+    margin-bottom: 64px;
+  }
+
+  .p-recruit__desc {
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+  }
+}

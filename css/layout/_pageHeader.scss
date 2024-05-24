@@ -1,0 +1,76 @@
+@use "../setting/setting";
+
+.l-pageHeader {
+  position: relative;
+  height: 120px;
+  margin-bottom: clamp(4.5rem, 2.5rem + 10vw, 10rem);
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: calc(100% - 60px);
+    height: calc(100% + 120px);
+    background: setting.$color-main;
+    left: 0;
+    top: -60px;
+  }
+}
+
+.l-pageHeader__img {
+  height: 120px;
+  position: relative;
+  z-index: 2;
+
+  img {
+    height: 100%;
+    width: calc(100% - 60px);
+    margin-left: auto;
+  }
+}
+
+.l-pageHeader__title {
+  position: absolute;
+  top: 50%;
+  left: 6%;
+  transform: translateY(-50%);
+  z-index: 2;
+  color: #fff;
+  letter-spacing: 0.175rem;
+  @include setting.heading-2;
+}
+
+@media (min-width: 768px) {
+  .l-pageHeader {
+    &::before {
+      width: 40%;
+      height: calc(100% + 180px);
+    }
+  }
+
+  .l-pageHeader__img {
+    height: 160px;
+
+    img {
+      width: calc(100% - 120px);
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .l-pageHeader {
+    height: 240px;
+
+    &::before {
+      height: calc(100% + 200px);
+      top: -100px;
+    }
+  }
+
+  .l-pageHeader__img {
+    height: 240px;
+
+    img {
+      width: calc(100% - 200px);
+    }
+  }
+}

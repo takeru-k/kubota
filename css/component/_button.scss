@@ -1,0 +1,67 @@
+@use "../setting/setting";
+
+.c-button {
+  position: relative;
+  margin-top: clamp(1.5rem, 0.5rem + 2.5vw, 2.5rem);
+}
+
+.c-button-center {
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+
+.c-button__link {
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(36, 36, 36, 0.2);
+  letter-spacing: 1.6px;
+  transition: 0.4s;
+  position: relative;
+  padding-right: 32px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    top: calc(50% - 16px);
+    right: 0%;
+    background: url(../images/common/arrow-link.png) no-repeat center
+      center/contain;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    display: block;
+    bottom: -1px;
+    left: 0;
+    width: 50px;
+    height: 1px;
+    background: #242424;
+    transition: all 0.5s ease;
+  }
+
+  &:hover::before {
+    width: 100%;
+  }
+}
+
+.c-button__link-white {
+  color: #fff;
+  border-bottom: 1px solid #666;
+
+  &::after {
+    background-image: url(../images/common/arrow-link-white.png);
+  }
+
+  &::before {
+    background: #fff;
+    transition: all 0.5s ease;
+  }
+}
+
+.c-button-alert {
+  display: block;
+  margin-top: 24px;
+}
