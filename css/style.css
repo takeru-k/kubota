@@ -123,6 +123,35 @@ img {
      object-fit: cover;
 }
 
+/*===========
+inview
+===========*/
+.fadeIn {
+  opacity: 0;
+  transition: 1s;
+}
+
+.fadeIn_up {
+  opacity: 0;
+  transform: translate(0, 20%);
+  transition: 1s;
+}
+
+.fadeIn_left {
+  opacity: 0;
+  transform: translate(-80%, 0);
+  transition: 1s;
+}
+
+.fadeIn.is-show {
+  opacity: 1;
+}
+
+.fadeIn_up.is-show {
+  transform: translate(0, 0);
+  opacity: 1;
+}
+
 .l-header {
   height: 60px;
   width: 100%;
