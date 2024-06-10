@@ -554,6 +554,10 @@ inview
   margin-top: 24px;
 }
 
+.c-button__link-disabled {
+  opacity: 0.7;
+}
+
 .c-cta {
   color: #fff;
   border-bottom: 1px solid #999;
