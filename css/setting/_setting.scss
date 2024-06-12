@@ -52,13 +52,6 @@ $color-link: #337ab7;
 /*================================
 	フォント設定
 =================================*/
-// 基準となるフォントサイズを設定
-$baseFontSize: 16px;
-
-// pxをremに変換する関数
-@function rem($pxValue) {
-  @return ($pxValue / $baseFontSize) * 1rem;
-}
 
 $font-english: "Ibarra Real Nova", serif;
 $font-heading: "游明朝", "Yu Mincho", YuMincho, "Hiragino Mincho Pro", serif;

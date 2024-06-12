@@ -81,3 +81,14 @@
     padding: 0 24px;
   }
 }
+
+@media (min-width: 1280px) {
+  .p-topService__contents {
+    gap: 80px;
+  }
+
+  .p-topService__img {
+    width: 540px;
+    height: 540px;
+  }
+}
